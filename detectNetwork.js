@@ -27,7 +27,9 @@ var detectNetwork = function(cardNumber) {
     cardType = "MasterCard";
   }  
   //  China UnionPay if statement
-
+  else if (stringToNumber(cardNumber, 2) === 62 && (cardNumber.length >= 16 && cardNumber.length <= 19)) {
+    cardType = "China UnionPay";
+  }  
   //  Switch/Maestro if statement
 
   // Else statement if card number doesn't match any
