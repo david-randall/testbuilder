@@ -11,12 +11,14 @@ var detectNetwork = function(cardNumber) {
   	  return "You didn't enter a card number";
   	}
   // Diner;s Club if statement	
-  	else if ((parseInt(firstTwoNumbers, 10) === 38 || parseInt(firstTwoNumbers, 10) === 39) && cardNumber.length === 14){
+  	else if ((parseInt(firstTwoNumbers, 10) === 38 || parseInt(firstTwoNumbers, 10) === 39) && cardNumber.length === 14) {
   	  cardType = "Diner's Club";
   	}
   	
   //  American Express if statement
-
+    else if ((parseInt(firstTwoNumbers, 10) === 34 || parseInt(firstTwoNumbers, 10) === 37) && cardNumber.length === 15) {
+      cardType = "American Express";
+    }  
   //  Visa if statement
 
   //  MasterCard if statement
